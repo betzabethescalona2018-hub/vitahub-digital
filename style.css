@@ -2715,3 +2715,67 @@ html {
         transition: none;
     }
 }
+
+/* PROYECTO REAL - VITAHUB CHILE */
+
+.proyecto-imagen.proyecto-real {
+    display: block;
+    padding: 0;
+    min-height: 0;
+    background: #172b45;
+}
+
+.proyecto-real img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+}
+
+.proyecto-card:hover .proyecto-real img {
+    transform: scale(1.03);
+}
+
+/* ENLACE AL PROYECTO */
+
+.proyecto-enlace {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 22px;
+    padding: 11px 16px;
+
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.proyecto-enlace:hover {
+    background-color: #38bdf8;
+    color: #0b1120;
+}
+
+.proyecto-enlace:focus-visible {
+    outline: 2px solid #7dd3fc;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .proyecto-real img,
+    .proyecto-enlace {
+        transition: none;
+    }
+
+    .proyecto-card:hover .proyecto-real img {
+        transform: none;
+    }
+}
