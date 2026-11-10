@@ -1,0 +1,745 @@
+
+/* Estilos iniciales de VitaHub Digital */
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background-color: #0b1120;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #38bdf8;
+    font-size: 40px;
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+button {
+    background-color: #38bdf8;
+    color: #0b1120;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7dd3fc;
+}
+
+/* CABECERA - VITAHUB DIGITAL */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    background-color: #111827;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+/* Nombre de la marca */
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+/* Menú de navegación */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #38bdf8;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+/* SECCIÓN HERO - VITAHUB DIGITAL */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+    padding: 60px 30px;
+    background: linear-gradient(
+        135deg,
+        #0b1120 0%,
+        #172b45 100%
+    );
+    border-radius: 16px;
+}
+
+.hero-contenido {
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero-etiqueta {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #172b45;
+    color: #7dd3fc;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.15;
+    margin: 25px 0;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* BOTONES PRINCIPALES */
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-principal {
+    background-color: #38bdf8;
+    color: #0b1120;
+}
+
+.btn-principal:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    border: 1px solid #64748b;
+    color: #ffffff;
+}
+
+.btn-secundario:hover {
+    background-color: #1e293b;
+    border-color: #38bdf8;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        text-align: center;
+    }
+}
+
+
+/* SECCIÓN DE SERVICIOS - VITAHUB DIGITAL */
+
+.servicios {
+    padding: 90px 20px;
+}
+
+.servicios-encabezado {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.servicios-encabezado h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.servicios-encabezado h2 span {
+    color: #38bdf8;
+}
+
+.servicios-encabezado p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+/* DISTRIBUCIÓN DE LAS TARJETAS */
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* DISEÑO DE CADA TARJETA */
+
+.servicio-card {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 35px 25px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.servicio-card h3 {
+    color: #38bdf8;
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.servicio-card p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.12);
+}
+
+/* ADAPTACIÓN A TABLETS */
+
+@media (max-width: 992px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+    .servicios {
+        padding: 60px 10px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicio-card {
+        padding: 25px 20px;
+    }
+
+    .servicios-encabezado p {
+        font-size: 16px;
+    }
+}
+
+/* SOBRE NOSOTROS - VITAHUB DIGITAL */
+
+.nosotros {
+    background: linear-gradient(
+        135deg,
+        #111827 0%,
+        #172b45 100%
+    );
+    padding: 90px 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.nosotros-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nosotros-etiqueta {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.nosotros h2 {
+    color: #ffffff;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.nosotros h2 span {
+    color: #38bdf8;
+}
+
+.nosotros-contenido > p {
+    max-width: 750px;
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* TARJETAS DE BENEFICIOS */
+
+.nosotros-beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.beneficio {
+    background-color: #172b45;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 30px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.beneficio h3 {
+    color: #38bdf8;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.beneficio p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+    .nosotros {
+        padding: 60px 20px;
+    }
+
+    .nosotros-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-contenido > p {
+        font-size: 16px;
+    }
+
+    .beneficio {
+        padding: 25px 20px;
+    }
+}
+
+
+/* CONTACTO - VITAHUB DIGITAL */
+
+.contacto {
+    padding: 90px 20px;
+}
+
+.contacto-contenido {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    padding: 45px;
+}
+
+.contacto-etiqueta {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.contacto h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contacto h2 span {
+    color: #38bdf8;
+}
+
+.contacto-contenido > p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* FORMULARIO */
+
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    background-color: #1e293b;
+    color: #ffffff;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #94a3b8;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+/* BOTÓN DE ENVÍO */
+
+.btn-enviar {
+    background-color: #38bdf8;
+    color: #0b1120;
+    padding: 16px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-2px);
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+    .contacto {
+        padding: 60px 10px;
+    }
+
+    .contacto-contenido {
+        padding: 25px 20px;
+    }
+
+    .contacto-contenido > p {
+        font-size: 16px;
+    }
+}
+
+
+/* FOOTER - VITAHUB DIGITAL */
+
+.footer {
+    background-color: #111827;
+    border-top: 1px solid #334155;
+    border-radius: 16px 16px 0 0;
+    padding: 60px 40px 20px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LOGO E INFORMACIÓN */
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    color: #38bdf8;
+}
+
+.footer-info p {
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 350px;
+}
+
+/* NAVEGACIÓN */
+
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-enlaces h3,
+.footer-empresa h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.footer-enlaces a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-enlaces a:hover {
+    color: #38bdf8;
+}
+
+/* INFORMACIÓN DE EMPRESA */
+
+.footer-empresa p {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin: 0 0 12px;
+}
+
+/* PARTE INFERIOR */
+
+.footer-inferior {
+    max-width: 1200px;
+    margin: 45px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    text-align: center;
+}
+
+.footer-inferior p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ADAPTACIÓN A TABLETS */
+
+@media (max-width: 900px) {
+    .footer-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-info {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 45px 25px 20px;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-info {
+        grid-column: auto;
+    }
+
+    .footer-inferior {
+        margin-top: 35px;
+    }
+
+    .footer-inferior p {
+        font-size: 12px;
+    }
+}
+
+/* NAVEGACIÓN Y EXPERIENCIA DE USUARIO */
+
+/* Desplazamiento suave entre secciones */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Espacio al llegar a una sección */
+
+#inicio,
+#servicios,
+#nosotros,
+#contacto {
+    scroll-margin-top: 25px;
+}
+
+/* Mejoras en enlaces del menú */
+
+.menu a {
+    position: relative;
+    padding: 8px 0;
+}
+
+/* Línea celeste debajo del enlace */
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Navegación accesible con teclado */
+
+.menu a:focus-visible,
+.footer-enlaces a:focus-visible,
+.btn-principal:focus-visible,
+.btn-secundario:focus-visible,
+.btn-enviar:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 5px;
+}
+
+/* Respetar preferencias de movimiento reducido */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .menu a::after {
+        transition: none;
+    }
+}

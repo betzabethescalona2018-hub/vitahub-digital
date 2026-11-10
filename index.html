@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- TÍTULO PARA GOOGLE -->
+    <title>
+        VitaHub Digital | Diseño y Desarrollo Web en Chile
+    </title>
+
+    <!-- DESCRIPCIÓN DEL SITIO -->
+    <meta name="description"
+          content="En VitaHub Digital creamos páginas web profesionales, tiendas online y soluciones digitales a medida para emprendedores y pequeñas empresas en Chile.">
+
+    <!-- INDICACIÓN DE IDIOMA Y REGIÓN -->
+    <meta name="content-language" content="es-CL">
+
+    <!-- COLOR DEL NAVEGADOR -->
+    <meta name="theme-color" content="#0b1120">
+
+    <!-- ESTILOS DEL SITIO -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        VitaHub <span>Digital</span>
+    </div>
+
+    <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+    
+<!-- SECCIÓN PRINCIPAL -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-contenido">
+
+        <span class="hero-etiqueta">
+            DESARROLLO WEB EN CHILE
+        </span>
+
+        <h1>
+            Transformamos tus ideas en
+            <span>experiencias digitales.</span>
+        </h1>
+
+        <p>
+            Creamos páginas web modernas, rápidas
+            y adaptadas a tu negocio. Ayudamos a
+            emprendedores y pequeñas empresas a
+            construir una presencia digital profesional.
+        </p>
+
+        <div class="hero-botones">
+            <a href="#contacto" class="btn-principal">
+                Solicitar cotización
+            </a>
+
+            <a href="#servicios" class="btn-secundario">
+                Conocer servicios
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECCIÓN DE SERVICIOS -->
+
+<section class="servicios" id="servicios">
+
+    <div class="servicios-encabezado">
+        <h2>Nuestros <span>servicios</span></h2>
+
+        <p>
+            Soluciones digitales diseñadas para
+            impulsar tu negocio en Internet.
+        </p>
+    </div>
+
+    <div class="servicios-grid">
+
+        <article class="servicio-card">
+            <h3>Páginas web profesionales</h3>
+
+            <p>
+                Creamos sitios web modernos,
+                rápidos y adaptables a celulares,
+                ideales para emprendedores y empresas.
+            </p>
+        </article>
+
+        <article class="servicio-card">
+            <h3>Tiendas online</h3>
+
+            <p>
+                Desarrollamos tiendas digitales
+                para que puedas mostrar tus productos
+                y vender por Internet.
+            </p>
+        </article>
+
+        <article class="servicio-card">
+            <h3>Desarrollo web a medida</h3>
+
+            <p>
+                Creamos funcionalidades y soluciones
+                web personalizadas según las
+                necesidades de cada negocio.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- SECCIÓN SOBRE NOSOTROS -->
+
+<section class="nosotros" id="nosotros">
+
+    <div class="nosotros-contenido">
+
+        <span class="nosotros-etiqueta">
+            CONOCE VITAHUB DIGITAL
+        </span>
+
+        <h2>
+            Tecnología que impulsa
+            <span>tu negocio.</span>
+        </h2>
+
+        <p>
+            Somos VitaHub Digital, una marca de
+            VitaHub Chile SpA enfocada en crear
+            soluciones web para emprendedores
+            y pequeñas empresas.
+        </p>
+
+        <p>
+            Nuestro objetivo es ayudarte a construir
+            una presencia digital moderna, funcional
+            y adaptada a las necesidades de tu negocio.
+        </p>
+
+        <div class="nosotros-beneficios">
+
+            <div class="beneficio">
+                <h3>Desarrollo a medida</h3>
+                <p>
+                    Soluciones diseñadas según
+                    las necesidades de cada proyecto.
+                </p>
+            </div>
+
+            <div class="beneficio">
+                <h3>Diseño adaptable</h3>
+                <p>
+                    Sitios preparados para visualizarse
+                    en computadores, tablets y celulares.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SECCIÓN CONTACTO -->
+
+<section class="contacto" id="contacto">
+
+    <div class="contacto-contenido">
+
+        <span class="contacto-etiqueta">
+            HABLEMOS DE TU PROYECTO
+        </span>
+
+        <h2>
+            ¿Listo para llevar tu negocio al
+            <span>siguiente nivel?</span>
+        </h2>
+
+        <p>
+            Cuéntanos qué necesitas y conversemos
+            sobre tu próximo proyecto digital.
+        </p>
+
+        <form class="contacto-formulario" id="formulario-contacto">
+
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@correo.cl"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="servicio">Tipo de proyecto</label>
+
+                <select id="servicio" name="servicio" required>
+                    <option value="">
+                        Selecciona un servicio
+                    </option>
+                    <option value="pagina-web">
+                        Página web profesional
+                    </option>
+                    <option value="tienda-online">
+                        Tienda online
+                    </option>
+                    <option value="desarrollo-medida">
+                        Desarrollo web a medida
+                    </option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">
+                    Cuéntanos sobre tu proyecto
+                </label>
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Describe brevemente lo que necesitas..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">
+                Solicitar cotización
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER - VITAHUB DIGITAL -->
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-info">
+
+            <div class="footer-logo">
+                VitaHub <span>Digital</span>
+            </div>
+
+            <p>
+                Creamos soluciones digitales para
+                emprendedores y pequeñas empresas
+                en Chile.
+            </p>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>Navegación</h3>
+
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+        <div class="footer-empresa">
+
+            <h3>Empresa</h3>
+
+            <p>VitaHub Chile SpA</p>
+            <p>Chile</p>
+            <p>Desarrollo web</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-inferior">
+
+        <p>
+            &copy; 2026 VitaHub Digital.
+            Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
