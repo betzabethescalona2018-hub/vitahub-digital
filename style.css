@@ -2338,3 +2338,380 @@ html {
         transform: none;
     }
 }
+
+/* VISTAS PREVIAS DEL PORTAFOLIO */
+
+.proyecto-imagen {
+    overflow: hidden;
+}
+
+.preview-navegador {
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+
+    background: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+    transition: transform 0.35s ease;
+}
+
+/* ANIMACION AL PASAR EL MOUSE */
+
+.proyecto-card:hover .preview-navegador {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* BARRA DEL NAVEGADOR */
+
+.preview-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #1e293b;
+    padding: 10px 13px;
+}
+
+.preview-puntos::before {
+    content: "● ● ●";
+    color: #38bdf8;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.preview-barra small {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+/* CONTENIDO DE LA PAGINA */
+
+.preview-pagina {
+    padding: 16px;
+}
+
+.preview-marca {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* PORTADA DE LA MINIATURA */
+
+.preview-portada {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    padding: 24px 18px;
+    background: #1e3a5f;
+    border-radius: 8px;
+}
+
+.preview-portada small {
+    color: #bae6fd;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.preview-portada strong {
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+/* BOTON DECORATIVO */
+
+.preview-boton {
+    display: inline-block;
+    padding: 8px 13px;
+
+    background: #38bdf8;
+    color: #0b1120;
+
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* PRODUCTOS O SERVICIOS SIMULADOS */
+
+.preview-productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.preview-productos div {
+    height: 40px;
+    background: #263e58;
+    border-radius: 6px;
+}
+
+/* ESTILO DIFERENTE PARA WEB EMPRESARIAL */
+
+.miniatura-empresa {
+    background: linear-gradient(
+        135deg,
+        #173f4e,
+        #164e63
+    );
+}
+
+.miniatura-empresa .preview-portada {
+    background: #195f6c;
+}
+
+.miniatura-empresa .preview-boton {
+    background: #5eead4;
+    color: #134e4a;
+}
+
+.miniatura-empresa .preview-productos div {
+    background: #214f58;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+    .preview-pagina {
+        padding: 12px;
+    }
+
+    .preview-portada {
+        padding: 20px 14px;
+    }
+
+    .preview-portada strong {
+        font-size: 18px;
+    }
+
+    .preview-productos div {
+        height: 32px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .preview-navegador {
+        transition: none;
+    }
+
+    .proyecto-card:hover .preview-navegador {
+        transform: none;
+    }
+}
+
+
+/* EFECTOS PREMIUM DEL PORTAFOLIO */
+
+.proyecto-imagen {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* ILUMINACION DETRAS DE LAS MINIATURAS */
+
+.miniatura-tienda {
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(56, 189, 248, 0.25),
+            transparent 55%
+        ),
+        linear-gradient(135deg, #172b45, #1e3a5f);
+}
+
+.miniatura-empresa {
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(45, 212, 191, 0.22),
+            transparent 55%
+        ),
+        linear-gradient(135deg, #173f4e, #164e63);
+}
+
+/* VENTANA DEL NAVEGADOR */
+
+.preview-navegador {
+    position: relative;
+    z-index: 1;
+}
+
+/* LINEA LUMINOSA INFERIOR */
+
+.proyecto-imagen::before {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #38bdf8,
+        transparent
+    );
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.5);
+
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* EFECTO DE REFLEJO */
+
+.proyecto-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        115deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.13) 50%,
+        transparent 65%
+    );
+
+    transform: translateX(-120%);
+    transition: transform 0.85s ease;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* REFLEJO AL PASAR EL MOUSE */
+
+@media (hover: hover) and
+       (prefers-reduced-motion: no-preference) {
+
+    .proyecto-card:hover .proyecto-imagen::after {
+        transform: translateX(120%);
+    }
+
+}
+
+/* LUZ ESPECIAL PARA LA WEB EMPRESARIAL */
+
+.miniatura-empresa::before {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #5eead4,
+        transparent
+    );
+
+    box-shadow:
+        0 0 18px rgba(94, 234, 212, 0.5);
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .proyecto-imagen::after {
+        display: none;
+    }
+}
+
+
+/* LOGO OFICIAL - VITAHUB DIGITAL */
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.header .logo img {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.header .logo:hover img {
+    opacity: 0.85;
+}
+
+/* TABLETS Y CELULARES */
+
+@media (max-width: 1100px) {
+    .header .logo img {
+        width: 190px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        gap: 12px;
+    }
+
+    .header .logo img {
+        width: 165px;
+    }
+}
+
+/* LOGO DEL FOOTER - VITAHUB DIGITAL */
+
+.footer .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.footer .footer-logo img {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    transition: opacity 0.3s ease;
+}
+
+.footer .footer-logo:hover img {
+    opacity: 0.85;
+}
+
+.footer .footer-logo:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+    .footer .footer-logo img {
+        width: 190px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .footer .footer-logo img {
+        transition: none;
+    }
+}
