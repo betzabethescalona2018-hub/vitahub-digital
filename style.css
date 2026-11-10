@@ -2779,3 +2779,79 @@ html {
         transform: none;
     }
 }
+
+/* FICHA DE PROYECTO - VITAHUB DIGITAL */
+
+.proyecto-ficha {
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid #334155;
+}
+
+.proyecto-dato {
+    margin-bottom: 22px;
+}
+
+.proyecto-dato h4 {
+    color: #38bdf8;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.proyecto-dato p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ETIQUETAS DE FUNCIONALIDADES */
+
+.proyecto-etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.proyecto-etiquetas span {
+    display: inline-block;
+
+    padding: 7px 11px;
+
+    color: #bae6fd;
+    background-color: #172b45;
+
+    border: 1px solid #285478;
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.proyecto-etiquetas span:hover {
+    background-color: #1e3a5f;
+    border-color: #38bdf8;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+
+    .proyecto-ficha {
+        margin-top: 20px;
+    }
+
+    .proyecto-etiquetas {
+        gap: 7px;
+    }
+
+    .proyecto-etiquetas span {
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+}
