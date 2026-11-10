@@ -2060,3 +2060,281 @@ html {
     position: relative;
     z-index: 1;
 }
+
+/* BANNER COMERCIAL - VITAHUB DIGITAL */
+
+.cta-digital {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    max-width: 1150px;
+    margin: 60px auto;
+    padding: 80px 30px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(56, 189, 248, 0.23),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #101e35,
+            #172b45,
+            #0b1120
+        );
+
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* CUADRICULA DECORATIVA */
+
+.cta-digital::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(56, 189, 248, 0.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(56, 189, 248, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+    pointer-events: none;
+}
+
+/* CONTENIDO */
+
+.cta-digital-contenido {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ETIQUETA */
+
+.cta-digital-etiqueta {
+    display: inline-block;
+    color: #7dd3fc;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+/* TITULO */
+
+.cta-digital h2 {
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin: 0 0 25px;
+}
+
+.cta-digital h2 span {
+    color: #38bdf8;
+}
+
+/* DESCRIPCION */
+
+.cta-digital p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* BOTON PRINCIPAL */
+
+.cta-digital-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 16px 28px;
+
+    background: #38bdf8;
+    color: #0b1120;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 30px rgba(56, 189, 248, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* EFECTO DEL BOTON */
+
+.cta-digital-boton:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(56, 189, 248, 0.35);
+}
+
+.cta-digital-boton:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* TEXTO INFERIOR */
+
+.cta-digital-detalle {
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+
+    .cta-digital {
+        margin: 40px auto;
+        padding: 55px 20px;
+        border-radius: 18px;
+    }
+
+    .cta-digital p {
+        font-size: 16px;
+    }
+
+    .cta-digital-boton {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    .cta-digital-etiqueta {
+        font-size: 11px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cta-digital-boton {
+        transition: none;
+    }
+
+    .cta-digital-boton:hover {
+        transform: none;
+    }
+}
+
+/* BOTON FLOTANTE - VITAHUB DIGITAL */
+
+.volver-arriba {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #0284c7,
+        #0369a1
+    );
+
+    color: #ffffff;
+    border: 1px solid #7dd3fc;
+    border-radius: 15px;
+
+    font-size: 29px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 30px rgba(56, 189, 248, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* MOSTRAR AL DESPLAZARSE */
+
+.volver-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* EFECTO HOVER */
+
+.volver-arriba.visible:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 35px rgba(56, 189, 248, 0.45);
+}
+
+.volver-arriba:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+    .volver-arriba {
+        width: 46px;
+        height: 46px;
+        bottom: 18px;
+        right: 18px;
+        font-size: 25px;
+        border-radius: 12px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .volver-arriba {
+        transition: none;
+    }
+
+    .volver-arriba.visible:hover {
+        transform: none;
+    }
+}

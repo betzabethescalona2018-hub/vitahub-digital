@@ -224,3 +224,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+ 
+/* BOTON VOLVER ARRIBA - VITAHUB DIGITAL */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const botonArriba = document.querySelector(
+        ".volver-arriba"
+    );
+
+    if (!botonArriba) {
+        return;
+    }
+
+    function actualizarBoton() {
+
+        const mostrar = window.scrollY > 350;
+
+        botonArriba.classList.toggle(
+            "visible",
+            mostrar
+        );
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        actualizarBoton,
+        { passive: true }
+    );
+
+    // Revisar también al cargar la página
+
+    actualizarBoton();
+
+});
