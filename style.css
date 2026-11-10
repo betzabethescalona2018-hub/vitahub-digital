@@ -948,3 +948,135 @@ html {
         text-align: center;
     }
 }
+
+
+/* COMO TRABAJAMOS - VITAHUB DIGITAL */
+
+.proceso {
+    padding: 90px 20px;
+}
+
+.proceso-encabezado {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.proceso-etiqueta {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.proceso-encabezado h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.proceso-encabezado h2 span {
+    color: #38bdf8;
+}
+
+.proceso-encabezado p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* TARJETAS DEL PROCESO */
+
+.proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proceso-card {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 30px 22px;
+    min-width: 0;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.proceso-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.10);
+}
+
+.proceso-numero {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.proceso-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin: 0 0 15px;
+}
+
+.proceso-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ADAPTACION A TABLETS */
+
+@media (max-width: 992px) {
+    .proceso-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+    .proceso {
+        padding: 60px 10px;
+    }
+
+    .proceso-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .proceso-card {
+        padding: 25px 20px;
+    }
+
+    .proceso-encabezado p {
+        font-size: 16px;
+    }
+
+    .proceso-numero {
+        font-size: 32px;
+    }
+}
+
+/* RESPETAR MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+    .proceso-card {
+        transition: none;
+    }
+
+    .proceso-card:hover {
+        transform: none;
+    }
+}
