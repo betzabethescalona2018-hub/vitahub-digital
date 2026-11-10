@@ -110,3 +110,63 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ANIMACIONES DE APARICION - VITAHUB DIGITAL */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const elementos = document.querySelectorAll(
+        ".servicio-card, " +
+        ".proyecto-card, " +
+        ".proceso-card, " +
+        ".beneficio, " +
+        ".faq-item"
+    );
+
+    // Respetar las preferencias de accesibilidad
+
+    const movimientoReducido = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (
+        movimientoReducido ||
+        !("IntersectionObserver" in window)
+    ) {
+        return;
+    }
+
+    // Detectar cuando aparecen los elementos
+
+    const observador = new IntersectionObserver(
+        (entradas, observer) => {
+
+            entradas.forEach((entrada) => {
+
+                if (entrada.isIntersecting) {
+
+                    entrada.target.classList.add("visible");
+
+                    observer.unobserve(entrada.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.1
+        }
+    );
+
+    // Activar animaciones
+
+    elementos.forEach((elemento) => {
+
+        elemento.classList.add("revelar");
+
+        observador.observe(elemento);
+
+    });
+
+});
