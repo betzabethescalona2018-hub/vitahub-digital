@@ -1080,3 +1080,158 @@ html {
         transform: none;
     }
 }
+
+
+/* PREGUNTAS FRECUENTES - VITAHUB DIGITAL */
+
+.faq {
+    padding: 90px 20px;
+}
+
+.faq-encabezado {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.faq-etiqueta {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.faq-encabezado h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.faq-encabezado h2 span {
+    color: #38bdf8;
+}
+
+.faq-encabezado p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* CONTENEDOR DE PREGUNTAS */
+
+.faq-contenido {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TARJETAS */
+
+.faq-item {
+    background-color: #111827;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 0 25px;
+    transition: border-color 0.3s ease;
+}
+
+.faq-item[open] {
+    border-color: #38bdf8;
+}
+
+/* PREGUNTAS */
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 22px 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* OCULTAR MARCADOR PREDETERMINADO */
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* SIMBOLO + */
+
+.faq-item summary::after {
+    content: "+";
+    color: #38bdf8;
+    font-size: 26px;
+    font-weight: normal;
+    flex-shrink: 0;
+}
+
+/* CAMBIAR A - CUANDO ESTA ABIERTA */
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.faq-item summary:hover {
+    color: #7dd3fc;
+}
+
+/* NAVEGACION CON TECLADO */
+
+.faq-item summary:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* RESPUESTAS */
+
+.faq-item p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 25px;
+    padding-top: 18px;
+    border-top: 1px solid #334155;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+    .faq {
+        padding: 60px 10px;
+    }
+
+    .faq-encabezado {
+        margin-bottom: 35px;
+    }
+
+    .faq-encabezado p {
+        font-size: 16px;
+    }
+
+    .faq-item {
+        padding: 0 18px;
+    }
+
+    .faq-item summary {
+        font-size: 15px;
+        padding: 18px 0;
+    }
+
+    .faq-item p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
