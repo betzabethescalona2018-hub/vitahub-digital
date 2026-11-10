@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
-        const servicio = document.getElementById("servicio");
+        const servicioSeleccionado = document.getElementById("servicio").value;
         const mensaje = document.getElementById("mensaje").value.trim();
 
         if (!nombre || !email || !servicio.value || !mensaje) {
