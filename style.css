@@ -885,3 +885,66 @@ html {
         padding: 25px 20px;
     }
 }
+
+
+/* CONTACTO POR WHATSAPP - VITAHUB DIGITAL */
+
+.contacto-whatsapp {
+    margin-top: 35px;
+    padding: 30px 25px;
+    background-color: #172b45;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.contacto-whatsapp p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
+/* BOTÓN DE WHATSAPP */
+
+.contacto-whatsapp .btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: #052e16;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.contacto-whatsapp .btn-principal:hover {
+    background-color: #4ade80;
+    transform: translateY(-3px);
+}
+
+.contacto-whatsapp .btn-principal:focus-visible {
+    outline: 3px solid #86efac;
+    outline-offset: 4px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+    .contacto-whatsapp {
+        padding: 25px 15px;
+        margin-top: 25px;
+    }
+
+    .contacto-whatsapp .btn-principal {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+    }
+}
