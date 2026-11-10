@@ -115,13 +115,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const elementos = document.querySelectorAll(
-        ".servicio-card, " +
-        ".proyecto-card, " +
-        ".proceso-card, " +
-        ".beneficio, " +
-        ".faq-item"
-    );
+    
+const elementos = document.querySelectorAll(
+    ".servicio-card, " +
+    ".proyecto-card, " +
+    ".proceso-card, " +
+    ".beneficio, " +
+    ".faq-item, " +
+    ".indicador-card"
+);
+
 
     // Respetar las preferencias de accesibilidad
 
@@ -166,6 +169,57 @@ document.addEventListener("DOMContentLoaded", () => {
         elemento.classList.add("revelar");
 
         observador.observe(elemento);
+
+    });
+
+});
+
+
+/* ILUMINACION INTERACTIVA - VITAHUB DIGITAL */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tarjetas = document.querySelectorAll(
+        ".tecnologia-item"
+    );
+
+    // Solo activar el efecto con mouse o puntero preciso
+
+    const admiteHover = window.matchMedia(
+        "(hover: hover) and (pointer: fine)"
+    ).matches;
+
+    if (!admiteHover) {
+        return;
+    }
+
+    tarjetas.forEach((tarjeta) => {
+
+        tarjeta.addEventListener("pointermove", (evento) => {
+
+            const rect = tarjeta.getBoundingClientRect();
+
+            const x = evento.clientX - rect.left;
+            const y = evento.clientY - rect.top;
+
+            tarjeta.style.setProperty(
+                "--mouse-x",
+                `${x}px`
+            );
+
+            tarjeta.style.setProperty(
+                "--mouse-y",
+                `${y}px`
+            );
+
+        });
+
+        tarjeta.addEventListener("pointerleave", () => {
+
+            tarjeta.style.removeProperty("--mouse-x");
+            tarjeta.style.removeProperty("--mouse-y");
+
+        });
 
     });
 

@@ -1665,3 +1665,398 @@ html {
         transition: none;
     }
 }
+
+
+/* INDICADORES - VITAHUB DIGITAL */
+
+.indicadores {
+    padding: 85px 20px;
+}
+
+.indicadores-encabezado {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+.indicadores-etiqueta {
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.indicadores-encabezado h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.indicadores-encabezado h2 span {
+    color: #38bdf8;
+}
+
+.indicadores-encabezado p {
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+/* TARJETAS */
+
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.indicador-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    padding: 45px 25px;
+
+    background: linear-gradient(
+        145deg,
+        #111827,
+        #172b45
+    );
+
+    border: 1px solid #334155;
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* LINEA DECORATIVA SUPERIOR */
+
+.indicador-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #38bdf8,
+        transparent
+    );
+}
+
+/* NUMEROS DESTACADOS */
+
+.indicador-numero {
+    display: block;
+    font-size: clamp(48px, 5vw, 70px);
+    font-weight: 800;
+    line-height: 1;
+    color: #38bdf8;
+    margin-bottom: 22px;
+
+    text-shadow:
+        0 0 30px rgba(56, 189, 248, 0.25);
+}
+
+.indicador-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin: 0 0 12px;
+}
+
+.indicador-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.indicador-card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 15px 40px rgba(56, 189, 248, 0.12);
+}
+
+/* ADAPTACION A TABLETS */
+
+@media (max-width: 900px) {
+    .indicadores-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+    .indicadores {
+        padding: 60px 10px;
+    }
+
+    .indicador-card {
+        padding: 35px 20px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .indicador-card {
+        transition: none;
+    }
+
+    .indicador-card:hover {
+        transform: none;
+    }
+}
+
+
+/* ANIMACION ESCALONADA DE INDICADORES */
+
+/* Segunda tarjeta */
+
+.indicador-card.revelar:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+/* Tercera tarjeta */
+
+.indicador-card.revelar:nth-child(3) {
+    transition-delay: 0.30s;
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .indicador-card.revelar {
+        transition-delay: 0s;
+    }
+
+}
+
+/* TECNOLOGIAS - VITAHUB DIGITAL */
+
+.tecnologias {
+    padding: 90px 20px;
+    background: linear-gradient(
+        135deg,
+        #0b1120,
+        #101d33,
+        #0b1120
+    );
+
+    border-radius: 20px;
+}
+
+/* ENCABEZADO */
+
+.tecnologias-encabezado {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.tecnologias-etiqueta {
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tecnologias-encabezado h2 {
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.tecnologias-encabezado h2 span {
+    color: #38bdf8;
+}
+
+.tecnologias-encabezado p {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* DISTRIBUCION DE TECNOLOGIAS */
+
+.tecnologias-lista {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+/* TARJETAS */
+
+.tecnologia-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    min-width: 0;
+    padding: 28px 15px;
+
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tecnologia-item:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow:
+        0 12px 35px rgba(56, 189, 248, 0.15);
+}
+
+/* ICONOS DECORATIVOS */
+
+.tecnologia-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    background: #172b45;
+    border-radius: 15px;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.html-icono {
+    color: #f97316;
+}
+
+.css-icono {
+    color: #38bdf8;
+}
+
+.js-icono {
+    color: #facc15;
+}
+
+.php-icono {
+    color: #a5b4fc;
+}
+
+.mysql-icono {
+    color: #2dd4bf;
+}
+
+/* NOMBRES */
+
+.tecnologia-nombre {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .tecnologias-lista {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .tecnologias {
+        padding: 60px 15px;
+    }
+
+    .tecnologias-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .tecnologia-item {
+        padding: 22px 10px;
+    }
+
+    .tecnologia-icono {
+        width: 55px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .tecnologias-encabezado p {
+        font-size: 16px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    .tecnologia-item {
+        transition: none;
+    }
+
+    .tecnologia-item:hover {
+        transform: none;
+    }
+}
+
+/* EFECTO SPOTLIGHT - VITAHUB DIGITAL */
+
+.tecnologia-item {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            180px circle at var(--mouse-x, 50%)
+                           var(--mouse-y, 50%),
+            rgba(56, 189, 248, 0.22),
+            transparent 75%
+        ),
+        #111827;
+}
+
+/* ILUMINACION AL PASAR EL MOUSE */
+
+.tecnologia-item:hover {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 15px 40px rgba(56, 189, 248, 0.18);
+}
+
+/* MANTENER EL CONTENIDO POR ENCIMA */
+
+.tecnologia-icono,
+.tecnologia-nombre {
+    position: relative;
+    z-index: 1;
+}
