@@ -47,3 +47,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+/* MENU MOVIL - VITAHUB DIGITAL */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const botonMenu =
+        document.querySelector(".menu-toggle");
+
+    const menu =
+        document.getElementById("menu-principal");
+
+    if (!botonMenu || !menu) {
+        return;
+    }
+
+    // Abrir y cerrar el menu
+
+    botonMenu.addEventListener("click", () => {
+
+        const abierto =
+            menu.classList.toggle("abierto");
+
+        botonMenu.setAttribute(
+            "aria-expanded",
+            String(abierto)
+        );
+
+        botonMenu.setAttribute(
+            "aria-label",
+            abierto ? "Cerrar menú" : "Abrir menú"
+        );
+
+        botonMenu.textContent =
+            abierto ? "✕" : "☰";
+
+    });
+
+    // Cerrar al seleccionar un enlace
+
+    menu.querySelectorAll("a").forEach((enlace) => {
+
+        enlace.addEventListener("click", () => {
+
+            menu.classList.remove("abierto");
+
+            botonMenu.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            botonMenu.setAttribute(
+                "aria-label",
+                "Abrir menú"
+            );
+
+            botonMenu.textContent = "☰";
+
+        });
+
+    });
+
+});
